@@ -10,8 +10,9 @@
  */
 
 // Basic catch-all route for REST controller, action == model
-Route::set('api', 'api/<action>((/<id>)(.<content_type>))')
+Route::set('api', 'api((/<model>(/<id>)(.<content_type>)))')
 	->defaults(array(
 		'controller' => 'rest',
+		'action' => 'restapi',
 		'content_type' => 'json'
 	));
