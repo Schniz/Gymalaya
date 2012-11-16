@@ -252,7 +252,21 @@ abstract class REST_Core {
 	 */
 	public function result_json()
 	{
-		return json_encode($this->_result);
+		$res = $this->_result;
+		
+		if ($res instanceof ORM) {
+			$res = $res->toArray();
+		} elseif (is_array($res)) {
+			$myArray = array();
+			
+			foreach ($res as $val) {
+				$myArray[] = $val->toArray();
+			}
+			
+			$res = $myArray;
+		}
+		
+		return json_encode($res);
 	}
 
 	/**
