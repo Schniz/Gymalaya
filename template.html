@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        
+
         <!-- CSS
         ==================== -->
         <link rel="stylesheet" type="text/css" href="css/token-input.css" />
@@ -21,7 +21,7 @@
         ==================== -->
         <link rel="stylesheet/less" type="text/css" href="less/bootstrap.less" />
         <link rel="stylesheet/less" type="text/css" href="less/responsive.less" />
-        
+
         <script data-main="js/main" src="js/lib/require-jquery.js"></script>
 
         <!-- Javascript
@@ -42,118 +42,39 @@
         <script src="js/husham-like-dislike.js" type="text/javascript"></script>
     </head>
 
-    <body>
-        <div id="fb-root"></div>
-        <div class="navbar navbar-fixed-top">
-            <button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar">
-                </span>
-                <span class="icon-bar">
-                </span>
-                <span class="icon-bar">
-                </span>
-            </button>
-            <button type="button" class="btn btn-navbar visible-phone add-husham-phone"><i class="icon-edit icon-white"></i></button>
-            <a href="#" class="brand">יצאתי חושם</a>
-            <div class="navbar-inner">
-                <div class="container">
-                    <div class="nav-collapse">
-                        <ul class="nav">
-                            <li class="dropdown user-menu">
-                                
-                            </li>
-                            <li class="active">
-                                <a href="#h">אחרונים</a>
-                            </li>
-                            <li>
-                                <a href="#about">כיף</a>
-                            </li>
-                            <li>
-                                <a href="#contact">שלום</a>
-                            </li>
-                        </ul>
-
-                    </div><!--/.nav-collapse -->
-                </div>
-            </div>
-        </div>
-
+    <body style="
+    background-image: url('img/use_your_illusion.png'); margin: 3px;
+    ">
         <div class="container main-page">
-            
-            <script type="text/mustache" data-template-name="add-post-box-view">
-            <form class="well add-husham-box center hidden-phone">
-                <h1>יצאת חושם?</h1>
-                <p class="husham-demo-text">
-                    עוד מבית הספר היסודי, ידעת שרצית אותה. ככל שהשנים עברו חשקת בה עוד ועוד - והיום, היא באה אליך בקפיטריה והזמינה אותך לצאת.
-                    לפני שהספקת לאמר כן, הבאת עליה את האפצ'י הכי עצבני שהיה אי פעם.
-                </p>
-                <p class="husham-demo-text">
-                    <strong>
-                        יצאת חושם.
-                    </strong>
-                </p>
-                <p>
-                    <input type="text" class="input-large husham-textbox span10" placeholder="בלה בלה בלה." />
-                </p>
-                <p>
-                    תייג: <input type="text" class="husham-box-tagging-box" />
-                </p>
-                <p class="husham-add-actions">
-                    <input type="button" class="btn btn-large btn-primary" value="יצאתי חושם" />
-                    <input type="reset" class="btn btn-large btn-danger reset-form" value="אופס" />
-                </p>
-            </form><!--/.add-husham-box -->
-            </script>
-            
-            <!-- Hushams -->
-            <script type="text/mustache" data-template-name="husham-story-box">
-            <article class="husham-box" data-husham-id="66">
-                <div class="sender-thumb">
-                    {{#author_image}}
-                        {{author}}
-                    {{/author_image}}
-                </div>
-                <div class="husham-text">
-                    <p>
-                        {{text}}
-                    </p>
-                </div>
-                <ul class="husham-tags">
-                    {{#tags}}
-                        <li><a href="posts/{{name}}">{{name}}</a></li>
-                    {{/tags}}
-                </ul>
-                <div class="clearer"></div>
-                <p class="husham-info form-inline">
-                    נשלח על ידי <a href="#" class="sender">{{author}}</a> בתאריך <span class="send-date">{{date_posted}}</span>
-                    <a href="#" class="btn btn-mini btn-success like-post">{{likes}} <i class="icon-thumbs-up"></i></a>
-                    <a href="#" class="btn btn-mini btn-danger dislike-post">{{dislikes}} <i class="icon-thumbs-down"></i></a>
-                </p>
-            </article>
-            <article class="husham-box" data-husham-id="77">
-                <div class="sender-thumb">
-                    <img src="https://graph.facebook.com/me/picture/square" alt="me" />
-                </div>
-                <div class="husham-text">
-                    <p>
-                        היום הלכתי מכות במעלית.
-                        <strong>
-                            יצאתי חושם.
-                        </strong>
-                    </p>
-                </div>
-                <p class="husham-info form-inline">
-                    נשלח על ידי <a href="#" class="sender">מיקו</a> בתאריך <span class="send-date">06/06/2006</span>
-                    <a href="#" class="btn btn-mini btn-success like-post"><strong>60</strong><i class="icon-thumbs-up"></i></a>
-                    <a href="#" class="btn btn-mini btn-danger dislike-post"><strong>50</strong><i class="icon-thumbs-down"></i></a>
-                </p>
-            </article>
-            </script>
+
+            <div style="
+            margin: 20px 90px 80px 0;
+            ">
+                <h1 class="span4" style="float:right; text-align:right;text-shadow: 2px 2px black;color: #ffffff;letter-spacing: normal;"> היי אור, </h1>
+            </div>
+            <div class="hero-unit targil-info" style="
+
+            ">
+                <h1>כפיפות בטן</h1>
+                שריר : {{muscle_name}}
+            </div>
+            <div class="well targil-info span8">Hello</div>
+            <div class="well targil-info span8">World</div>
         </div><!--/.container -->
         <div class="loading-overlay">
             <div class="loading-box">
-            <div class="loading-img"> </div>
+                <div class="loading-img"></div>
             </div>
+        </div>
+        <div class="footer-buttons">
+            <button class="btn btn-success btn-huge" style="
+            padding:  30px 40px;
+            font-size: 250%;
+            border-radius: 10px;
+            font-weight: bold;
+            ">
+                פרטים אישיים
+            </button>
         </div>
     </body>
 </html>

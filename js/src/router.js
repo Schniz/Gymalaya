@@ -5,12 +5,8 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'views/MainPageView',
-  'views/MainPostView',
-  'views/AddPostBoxView',
-  'views/MainMultiPostView',
-  'views/menu/UserMenuView'
-], function($, _, Backbone, MainPageView, MainPostView, AddPostBoxView, MainMultiPostView, UserMenuView){
+  'views/MainPageView'
+], function($, _, Backbone, MainPageView){
   // Above we have passed in jQuery, Underscore and Backbone
   // They will not be accessible in the global scope
 	
@@ -26,26 +22,12 @@ define([
 	  	  },
 		  
 		  main : function(last) {
-		      this.mainPage.clearView();
-		      var addPostBoxView = new AddPostBoxView;
-		      this.mainPage.addView(addPostBoxView);
-		      
-			  if (last === undefined) {
-			      var multiPosts = new MainMultiPostView({
-			          search: true
-			      });
-			      this.mainPage.addView(multiPosts);
-			  } else {
-
-			  }
-			  
-			  this.mainPage.render();
+		      console.log("MAIN");
 		  }
 	  });
 	  
 	  function initialize(activeSession) {
 		  var router = new Router;
-		  router.userMenu = new UserMenuView({model: activeSession});
 		  window.MainPage = router.mainPage;
 		  Backbone.history.start();
 	  }
