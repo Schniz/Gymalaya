@@ -10,7 +10,6 @@ class Model_Worker extends ORM
 	{
 		return array(
 				'_id' => array(
-						array('not_empty'),
 				),
 				`firstname` => array(
 						array('not_empty'),

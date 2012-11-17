@@ -10,7 +10,6 @@ class Model_Muscle extends ORM
 	{
 		return array(
 				'_id' => array(
-						array('not_empty'),
 				),
 				`bodypart` => array(
 						array('max_length', array(':value', 100)),

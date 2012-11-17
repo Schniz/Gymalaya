@@ -10,7 +10,6 @@ class Model_Workout extends ORM
 	{
 		return array(
 				'_id' => array(
-						array('not_empty'),
 				),
 				'name' => array(
 						array('not_empty'),

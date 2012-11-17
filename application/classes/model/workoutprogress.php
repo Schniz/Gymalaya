@@ -10,7 +10,6 @@ class Model_Workoutprogress extends ORM
 	{
 		return array(
 				'_id' => array(
-						array('not_empty'),
 				),
 				'workout' => array(
 						array('not_empty'),

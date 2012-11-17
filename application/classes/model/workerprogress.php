@@ -10,7 +10,6 @@ class Model_Workerprogress extends ORM
 	{
 		return array(
 				'_id' => array(
-						array('not_empty'),
 				),
 				'workerid' => array(
 						array('not_empty'),
