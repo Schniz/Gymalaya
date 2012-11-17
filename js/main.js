@@ -41,10 +41,12 @@ require(['underscore',
          'hogan',
          'backbone',
          'app',
+         'models/Muscle',
          'jquery-ui',
          'backbone-paginator',
          'async'
-        ], function(_, $, hogan, Backbone, Husham) {
-	Husham.initialize();
-	this.App = Husham;
+        ], function(_, $, hogan, Backbone, App, Muscle) {
+	App.initialize();
+	window.App = App;
+	window.Muscle = new Muscle({name:"hamin", bodyarea: "left", bodypart: "chest"});
 });

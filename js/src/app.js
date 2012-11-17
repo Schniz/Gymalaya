@@ -6,8 +6,7 @@ define([
   'underscore',
   'backbone',
   'backbone-fbauth',
-  'src/router',
-  'models/post'
+  'src/router'
 ], function($, _, Backbone, SessionModel, Router){
   // Above we have passed in jQuery, Underscore and Backbone
   // They will not be accessible in the global scope
