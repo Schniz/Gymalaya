@@ -4,11 +4,14 @@ class Model_Workoutprogress extends ORM
 {
 	protected $_table_name = 'Workoutprogress';
 	
-	protected $_primary_key = array('workout','exercise','datecomplete');
+	protected $_primary_key = '_id';
 	
 	public function rules()
 	{
 		return array(
+				'_id' => array(
+						array('not_empty'),
+				),
 				'workout' => array(
 						array('not_empty'),
 				),

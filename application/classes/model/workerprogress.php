@@ -4,11 +4,14 @@ class Model_Workerprogress extends ORM
 {
 	protected $_table_name = 'Workerprogress';
 	
-	protected $_primary_key = array('workerid','currentdate');
+	protected $_primary_key = '_id';
 	
 	public function rules()
 	{
 		return array(
+				'_id' => array(
+						array('not_empty'),
+				),
 				'workerid' => array(
 						array('not_empty'),
 				),

@@ -23,6 +23,7 @@ class Model_REST_Restapi implements REST_CORS, REST_Method_Get, REST_Method_Dele
 	{
 		$id = $rest->param("id");
 		$model = $rest->param("model");
+		$rest->validate(!is_null($model), "Please choose a model", "Stop ruining our system!");
 		
 		if ($id !== NULL) {
 			$muscle = ORM::factory($model, $id);
@@ -34,8 +35,32 @@ class Model_REST_Restapi implements REST_CORS, REST_Method_Get, REST_Method_Dele
 	}
 	
 	public  function rest_put(Rest $rest){
+		$id = $rest->param("id");
+		$model = $rest->param("model");
+		$rest->validate(!is_null($model), "Please choose a model", "Stop ruining our system!");
+		
+		$muscle = ORM::factory($model, $id);
+		$data = $rest->body("json");
+		foreach ($data as $key => $value) {
+			$muscle->$key = $value;
+		}
+		return $muscle->update();
+	}
+	
+	public function rest_delete(Rest $rest){
+		$id = $rest->param("id");
+		$model = $rest->param("model");
+		$rest->validate(!is_null($model), "Please choose a model", "Stop ruining our system!");
+		
+		$obj = ORM::factory($model, $id);
+		return $obj->delete();
+	}
+	
+	public function rest_post(Rest $rest){
 		$model = $rest->param("model");
 		$muscle = ORM::factory($model);
+		$rest->validate(!is_null($model), "Please choose a model", "Stop ruining our system!");
+		
 		$data = $rest->body("json");
 		
 		foreach ($data as $key => $value) {
@@ -44,24 +69,6 @@ class Model_REST_Restapi implements REST_CORS, REST_Method_Get, REST_Method_Dele
 		
 		
 		return $muscle->save();
-	}
-	
-	public function rest_delete(Rest $rest){
-		$id = $rest->param("id");
-		$model = $rest->param("model");
-		$obj = ORM::factory($model, $id);
-		return $obj->delete();
-	}
-	
-	public function rest_post(Rest $rest){
-		$id = $rest->param("id");
-		$model = $rest->param("model");
-		$muscle = ORM::factory($model, $id);
-		$data = $rest->body("json");
-		foreach ($data as $key => $value) {
-			$muscle->$key = $value;
-		}
-		return $muscle->update();
 	}
 	
 	

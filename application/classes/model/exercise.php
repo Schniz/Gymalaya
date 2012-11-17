@@ -4,18 +4,21 @@ class Model_Exercise extends ORM
 {
 	protected $_table_name = 'Exercise';
 	
-	protected $_primary_key = 'name';
+	protected $_primary_key = '_id';
 	
 	public function rules()
 	{
 		return array(
+				'_id' => array(
+						array('not_empty'),
+				),
 				'name' => array(
 						array('not_empty'),
-						array('max_length', array(':value', 100)),
+						array('max_length', array(':value', 1000)),
 				),
 				`muscles` => array(
 						array('not_empty'),
-						array('max_length', array(':value', 100)),
+						array('max_length', array(':value', 1000)),
 				),
 				`machine` => array(
 						array('not_empty'),
@@ -23,8 +26,8 @@ class Model_Exercise extends ORM
 				`difficulty` => array(
 						array('not_empty'),
 				),
-				`discription` => array(
-						array('max_length', array(':value', 100)),
+				`description` => array(
+						array('max_length', array(':value', 1000)),
 				),
 				`demonstration` => array(
 				),

@@ -4,12 +4,12 @@ class Model_Workout extends ORM
 {
 	protected $_table_name = 'Workout';
 	
-	protected $_primary_key = 'id';
+	protected $_primary_key = '_id';
 	
 	public function rules()
 	{
 		return array(
-				`id` => array(
+				'_id' => array(
 						array('not_empty'),
 				),
 				'name' => array(
