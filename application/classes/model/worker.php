@@ -4,12 +4,12 @@ class Model_Worker extends ORM
 {
 	protected $_table_name = 'Worker';
 	
-	protected $_primary_key = '_id';
+	protected $_primary_key = 'id';
 	
 	public function rules()
 	{
 		return array(
-				'_id' => array(
+				'id' => array(
 				),
 				`firstname` => array(
 						array('not_empty'),

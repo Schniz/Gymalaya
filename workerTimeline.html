@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<title>מעקב אימונים</title>
+		
+		<!-- jQuery -->
+		<script data-main="js/main" src="js/lib/require-jquery.js"></script>
+		
+		<!-- BEGIN TimelineJS -->
+		<script type="text/javascript" src="js/lib/timeline/js/storyjs-embed.js"></script>
+		<script>
+			$(document).ready(function() {
+				createStoryJS({
+					type:		'timeline',
+					width:		'100%',
+					height:		'700',
+					source:		'example_json.json',
+					embed_id:	'workerTimeline',
+					debug:		true
+				});
+			});
+		</script>
+		<!-- END TimelineJS -->
+		
+	</head>
+	
+<body>
+
+<div id="workerTimeline"></div>|		
+		
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -5,10 +5,10 @@ define([
   'url-consts'
 ], function($, _, Backbone, UrlCons){
     var WorkerProgress = Backbone.Model.extend({
-        idAttribute: '_id',
+        idAttribute: 'id',
         
         defaults: {
-            '_id' : null,
+            'id' : null,
             'workerid' : null,
             'currentdate' : null,
             'weight' : null,

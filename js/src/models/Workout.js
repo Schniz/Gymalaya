@@ -5,11 +5,13 @@ define([
   'url-consts'
 ], function($, _, Backbone, UrlCons){
     var Workout = Backbone.Model.extend({
-        idAttribute: '_id',
+        idAttribute: 'id',
         
         defaults: {
-            '_id' : null,
-            'name' : null
+            'id' : null,
+            'name' : null,
+            'workerid' : null,
+            'exercises' : null
         },
         
         urlRoot: UrlCons.API.ROOT_API + "workout"

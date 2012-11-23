@@ -1,6 +1,6 @@
 RewriteEngine On
 
-RewriteBase /gymalaya/
+RewriteBase /Gymalaya/
 
 RewriteRule ^(application|modules|system) - [F,L]
 

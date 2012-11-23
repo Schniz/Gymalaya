@@ -46,7 +46,8 @@ require(['underscore',
          'backbone-paginator',
          'async'
         ], function(_, $, hogan, Backbone, App, Muscle) {
-	App.initialize();
 	window.App = App;
+	App.login();
+	App.initialize();
 	window.Muscle = new Muscle({name:"hamin", bodyarea: "left", bodypart: "chest"});
 });

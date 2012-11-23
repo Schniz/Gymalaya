@@ -80,7 +80,7 @@ if (isset($_SERVER['KOHANA_ENV']))
  * - boolean  caching     enable or disable internal caching                 FALSE
  */
 Kohana::init(array(
-	'base_url'   => '/gymalaya/',
+	'base_url'   => '/Gymalaya/',
 	'cache_dir' => APPPATH.'/cache'
 ));
 

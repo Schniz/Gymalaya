@@ -5,12 +5,12 @@ define([
   'url-consts'
 ], function($, _, Backbone, UrlCons){
     var Muscle = Backbone.Model.extend({
-        idAttribute: '_id',
+        idAttribute: 'id',
         
         defaults: {
-            '_id' : null,
-            'bodyarea' : null,
+            'id' : null,
             'name' : null,
+            'bodyarea' : null,
             'bodypart' : null
         },
         

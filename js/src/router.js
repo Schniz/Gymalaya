@@ -5,8 +5,9 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'views/MainPageView'
-], function($, _, Backbone, MainPageView){
+  'views/MainPageView',
+  'views/ExerciseView'
+], function($, _, Backbone, MainPageView, ExerciseView){
   // Above we have passed in jQuery, Underscore and Backbone
   // They will not be accessible in the global scope
 	
@@ -14,7 +15,9 @@ define([
 	      mainPage : new MainPageView,
 		  routes : {
 			  "" : "main",
-			  "last/:query" : "main"
+			  "last/:query" : "main",
+			  "help" : "help",
+			  "exercise" : "newExercise"
 		  },
 	  
 	  	  help : function() {
@@ -23,6 +26,11 @@ define([
 		  
 		  main : function(last) {
 		      console.log("MAIN");
+		  },
+		  
+		  newExercise : function() {
+			  var exercise = new ExerciseView(); 
+			  exercise.render();
 		  }
 	  });
 	  

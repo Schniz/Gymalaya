@@ -4,12 +4,12 @@ class Model_Muscle extends ORM
 {
 	protected $_table_name = 'Muscle';
 	
-	protected $_primary_key = '_id';
+	protected $_primary_key = 'id';
 	
 	public function rules()
 	{
 		return array(
-				'_id' => array(
+				'id' => array(
 				),
 				`bodypart` => array(
 						array('max_length', array(':value', 100)),

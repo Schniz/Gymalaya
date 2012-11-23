@@ -4,12 +4,12 @@ class Model_Machine extends ORM
 {
 	protected $_table_name = 'Machine';
 	
-	protected $_primary_key = '_id';
+	protected $_primary_key = 'id';
 	
 	public function rules()
 	{
 		return array(
-				'_id' => array(
+				'id' => array(
 				),
 				'name' => array(
 						array('not_empty'),

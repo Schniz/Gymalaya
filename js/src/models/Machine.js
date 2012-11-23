@@ -5,10 +5,10 @@ define([
   'url-consts'
 ], function($, _, Backbone, UrlCons){
     var Machine = Backbone.Model.extend({
-        idAttribute: '_id',
+        idAttribute: 'id',
         
         defaults: {
-            '_id' : null,
+            'id' : null,
             'name' : null
         },
         
